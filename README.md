@@ -1,4 +1,4 @@
-> **Notice:** *This project is part of the [Dockerized Drupal](https://dockerizedrupal.com/) initiative.*
+> **Notice:** *This project is a fork of the [Dockerized Drupal](https://dockerizedrupal.com/) initiative.*
 
 # docker-php-5.4
 
@@ -80,7 +80,7 @@ A Docker image for [PHP](http://php.net/) version 5.4 that runs PHP in FPM (Fast
       -e USER_ID="" \
       -e GROUP_ID="" \
       -d \
-      dockerizedrupal/php-5.4:1.2.10
+      defconjuan/docker-php-5.4:1.2.10.1
 
     CONTAINER="apache" && sudo docker run \
       --name "${CONTAINER}" \
@@ -97,8 +97,8 @@ A Docker image for [PHP](http://php.net/) version 5.4 that runs PHP in FPM (Fast
     TMP="$(mktemp -d)" \
       && git clone https://github.com/dockerizedrupal/docker-php-5.4.git "${TMP}" \
       && cd "${TMP}" \
-      && git checkout 1.2.10 \
-      && sudo docker build -t dockerizedrupal/php-5.4:1.2.10 . \
+      && git checkout 1.2.10.1 \
+      && sudo docker build -t defconjuan/docker-php-5.4:1.2.10.1 . \
       && cd -
 
 ## Changing the container behaviour on runtime through environment variables
